@@ -169,8 +169,8 @@ SLIDER
 numero-buses
 numero-buses
 0
-6
-6
+5
+5
 1
 1
 NIL
