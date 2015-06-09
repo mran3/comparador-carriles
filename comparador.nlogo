@@ -212,10 +212,10 @@ PENS
 "buses" 1.0 0 -13345367 true "" "plot pasajeros-buses"
 
 MONITOR
-204
-394
-310
-439
+324
+379
+425
+424
 NIL
 pasajeros-carros
 2
@@ -223,10 +223,10 @@ pasajeros-carros
 11
 
 MONITOR
-326
-394
-427
-439
+215
+379
+316
+424
 NIL
 pasajeros-ciclas
 2
@@ -335,10 +335,10 @@ NIL
 HORIZONTAL
 
 MONITOR
-441
-395
-545
-440
+432
+379
+534
+424
 NIL
 pasajeros-buses
 2
