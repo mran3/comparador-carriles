@@ -290,10 +290,10 @@ NIL
 HORIZONTAL
 
 SLIDER
-19
-297
-191
-330
+18
+285
+190
+318
 velocidad-carros
 velocidad-carros
 0
@@ -305,10 +305,10 @@ NIL
 HORIZONTAL
 
 SLIDER
-20
-338
-192
-371
+17
+324
+189
+357
 velocidad-ciclas
 velocidad-ciclas
 0
@@ -320,10 +320,10 @@ NIL
 HORIZONTAL
 
 SLIDER
-20
-378
-192
-411
+16
+363
+188
+396
 velocidad-buses
 velocidad-buses
 0
