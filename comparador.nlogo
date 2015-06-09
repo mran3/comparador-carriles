@@ -43,7 +43,7 @@ end
 to inicializar
 
 end
-to candela
+to comenzar
   tick
   ask turtles [ set heading 90 ]  
 
@@ -132,10 +132,10 @@ NIL
 BUTTON
 114
 10
-188
+199
 43
 NIL
-candela
+comenzar
 T
 1
 T
