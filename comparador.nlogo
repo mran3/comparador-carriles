@@ -31,21 +31,27 @@ to configurar
     if (pycor > -3) and (pycor < 3) [ set pcolor gray + 3 ]
     if (pycor > -10) and (pycor < -4) [ set pcolor gray ]
     ]
-;  set-current-plot "pasajeros-movilizados"
+  inicializar-carriles
   create-carros numero-carros [set shape "car side" set size 4 set ycor 7 set heading 90 set xcor random-xcor]
-  create-ciclas numero-ciclas-carril [set shape "bike" set size 2 set ycor 1.5 set heading 90 set xcor random-xcor]
-  create-ciclas2 numero-ciclas-carril [set shape "bike2" set size 2 set ycor -1 set heading 90 set xcor random-xcor]
+  create-ciclas numero-ciclas-carril [set shape "bike" set size 2.1 set ycor 1.5 set heading 90 set xcor random-xcor]
+  create-ciclas2 numero-ciclas-carril [set shape "bike2" set size 2.1 set ycor -1 set heading 90 set xcor random-xcor]
   create-buses numero-buses [set shape "bus" set size 6 set ycor -7 set heading 90 set xcor random-xcor]
   ask carros [ separarVehiculos 3.5 ]
-  ask ciclas [ separarVehiculos 2 ]
-  ask ciclas2 [ separarVehiculos 2 ]
+  ask ciclas [ separarVehiculos 2.1 ]
+  ask ciclas2 [ separarVehiculos 2.1 ]
   ask buses [ separarVehiculos 6 ]
 
 end
-to inicializar
-
+to inicializar-carriles
+;  if carril-superior = "carros" [
+;    user-message (word "Carro se le tiene") 
+;    ]
 end
 to comenzar
+  if ticks = 168 [
+    user-message(word "Ha transcurrido una semana")
+  ]
+   
   tick
   ask turtles [ set heading 90 ]  
 
@@ -189,8 +195,8 @@ SLIDER
 numero-ciclas-carril
 numero-ciclas-carril
 0
-17
-17
+16
+13
 1
 1
 NIL
@@ -303,7 +309,7 @@ velocidad-carros
 velocidad-carros
 0
 100
-38
+19.3
 1
 1
 NIL
@@ -318,7 +324,7 @@ velocidad-ciclas
 velocidad-ciclas
 0
 40
-14
+12.4
 1
 1
 NIL
