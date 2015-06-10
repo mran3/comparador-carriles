@@ -453,6 +453,8 @@ Para los rangos de emisiones de CO2 se tuvo en cuenta la información encontrada
 http://www.sunearthtools.com/es/tools/CO2-emissions-calculator.php#txtCO2_7
 http://www.terra.org/calc/
 
+Aunque las emisiones se calculan por tipo de vehículo, en la realidad, una mayor carga o número de pasajeros puede incrementar estas emisiones.
+
 ## CREDITOS
 
 Modelo realizado en el marco de la materia Modelos y Simulación - 2015-I de la Universidad Nacional de Colombia.
