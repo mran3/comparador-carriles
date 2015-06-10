@@ -31,12 +31,12 @@ to configurar
     ]
 ;  set-current-plot "pasajeros-movilizados"
   create-carros numero-carros [set shape "car side" set size 3.8 set ycor 7 set heading 90 set xcor random-xcor]
-  create-ciclas numero-ciclas-carril [set shape "bike" set size 1.9 set ycor 1.5 set heading 90 set xcor random-xcor]
-  create-ciclas2 numero-ciclas-carril [set shape "bike2" set size 1.9 set ycor -1 set heading 90 set xcor random-xcor]
+  create-ciclas numero-ciclas-carril [set shape "bike" set size 2 set ycor 1.5 set heading 90 set xcor random-xcor]
+  create-ciclas2 numero-ciclas-carril [set shape "bike2" set size 2 set ycor -1 set heading 90 set xcor random-xcor]
   create-buses numero-buses [set shape "bus" set size 6 set ycor -7 set heading 90 set xcor random-xcor]
   ask carros [ separarVehiculos 3.7 ]
-  ask ciclas [ separarVehiculos 1.8 ]
-  ask ciclas2 [ separarVehiculos 1.8 ]
+  ask ciclas [ separarVehiculos 1.9 ]
+  ask ciclas2 [ separarVehiculos 1.9 ]
   ask buses [ separarVehiculos 6 ]
 
 end
@@ -184,7 +184,7 @@ SLIDER
 numero-ciclas-carril
 numero-ciclas-carril
 0
-20
+18
 18
 1
 1
@@ -348,7 +348,7 @@ pasajeros-buses
 @#$#@#$#@
 ## ¿QUÉ ES?
 
-Este modelo compara la capacidad de transportar pasajeros a través de bicicleta, auto o bus. Cada uno de estos medios de transporte tiene a su disposición un carril de vía de
+Este modelo compara la capacidad de un carril para transportar pasajeros a través de bicicleta, auto o bus. Cada uno de estos medios de transporte tiene a su disposición un carril de vía de
 las mismas dimensions.
 
 ## ¿CÓMO FUNCIONA?
