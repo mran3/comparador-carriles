@@ -5,7 +5,9 @@
 
 globals [pasajeros-ciclas
   pasajeros-carros
-  pasajeros-buses]
+  pasajeros-buses
+  co2-carros
+  co2-buses]
   ;velocidad-carros
   ;velocidad-ciclas
   ;velocidad-buses]
@@ -57,11 +59,14 @@ to comenzar
      ] 
   ask carros [
     if incrementar-distancia velocidad-carros
-      [set pasajeros-carros pasajeros-carros + pasajeros-x-carro]
+      [set pasajeros-carros pasajeros-carros + pasajeros-x-carro
+       set co2-carros (co2-carros + co2-x-km-carro * distancia-viaje-km)]
+
   ] 
   ask buses [
       if incrementar-distancia velocidad-buses
-        [set pasajeros-buses pasajeros-buses + pasajeros-x-bus]
+        [set pasajeros-buses pasajeros-buses + pasajeros-x-bus
+         set co2-buses (co2-buses + co2-x-km-bus * distancia-viaje-km)]
     ]
   
  update-plots
@@ -283,7 +288,7 @@ distancia-viaje-km
 distancia-viaje-km
 0
 100
-20
+24
 1
 1
 NIL
@@ -298,7 +303,7 @@ velocidad-carros
 velocidad-carros
 0
 100
-36
+38
 1
 1
 NIL
@@ -328,7 +333,7 @@ velocidad-buses
 velocidad-buses
 0
 80
-8
+12
 1
 1
 NIL
@@ -342,6 +347,77 @@ MONITOR
 NIL
 pasajeros-buses
 2
+1
+11
+
+PLOT
+578
+373
+888
+571
+CO2 Emitido
+NIL
+NIL
+0.0
+10.0
+0.0
+10.0
+true
+true
+"" ""
+PENS
+"co2-carros" 1.0 0 -16777216 true "" "plot co2-carros"
+"co2-buses" 1.0 0 -14070903 true "" "plot co2-buses"
+
+SLIDER
+16
+403
+188
+436
+co2-x-km-carro
+co2-x-km-carro
+140
+350
+244
+1
+1
+NIL
+HORIZONTAL
+
+SLIDER
+14
+442
+186
+475
+co2-x-km-bus
+co2-x-km-bus
+370
+900
+620
+1
+1
+NIL
+HORIZONTAL
+
+MONITOR
+890
+475
+985
+520
+Kg CO2 Carros
+co2-carros / 1000
+3
+1
+11
+
+MONITOR
+892
+526
+986
+571
+Kg CO2 Buses
+co2-buses / 1000
+3
 1
 11
 
@@ -371,6 +447,11 @@ http://pccsc.net/bicycle-parking-info/
 
 El modelo funciona con velocidades promedio, sin embargo, bajo diferentes situaciones
 como una vía despejada, un medio de transporte específico en la realidad puede tener una velocidad considerablemente diferente a la velocidad promedio.
+
+Para los rangos de emisiones de CO2 se tuvo en cuenta la información encontrada en:
+
+http://www.sunearthtools.com/es/tools/CO2-emissions-calculator.php#txtCO2_7
+http://www.terra.org/calc/
 
 ## CREDITOS
 
