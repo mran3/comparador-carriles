@@ -32,13 +32,13 @@ to configurar
     if (pycor > -10) and (pycor < -4) [ set pcolor gray ]
     ]
 ;  set-current-plot "pasajeros-movilizados"
-  create-carros numero-carros [set shape "car side" set size 3.8 set ycor 7 set heading 90 set xcor random-xcor]
+  create-carros numero-carros [set shape "car side" set size 4 set ycor 7 set heading 90 set xcor random-xcor]
   create-ciclas numero-ciclas-carril [set shape "bike" set size 2 set ycor 1.5 set heading 90 set xcor random-xcor]
   create-ciclas2 numero-ciclas-carril [set shape "bike2" set size 2 set ycor -1 set heading 90 set xcor random-xcor]
   create-buses numero-buses [set shape "bus" set size 6 set ycor -7 set heading 90 set xcor random-xcor]
-  ask carros [ separarVehiculos 3.7 ]
-  ask ciclas [ separarVehiculos 1.9 ]
-  ask ciclas2 [ separarVehiculos 1.9 ]
+  ask carros [ separarVehiculos 3.5 ]
+  ask ciclas [ separarVehiculos 2 ]
+  ask ciclas2 [ separarVehiculos 2 ]
   ask buses [ separarVehiculos 6 ]
 
 end
@@ -189,8 +189,8 @@ SLIDER
 numero-ciclas-carril
 numero-ciclas-carril
 0
-18
-18
+17
+17
 1
 1
 NIL
